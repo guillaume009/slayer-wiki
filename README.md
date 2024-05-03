@@ -21,5 +21,3 @@ The wiki usually includes important information like:
 -   Monster drop table
 -   Monster locations
 -   Useful tips
-
-Plugin was first created by ffalor (https://github.com/ffalor/slayer-wiki). I Updated it to be compatible with the latest RuneLite.
