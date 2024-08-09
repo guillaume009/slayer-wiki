@@ -2,7 +2,6 @@ package com.guillaume009.slayerwiki;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import com.google.inject.Provides;
 import com.google.common.base.CaseFormat;
 import javax.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
@@ -79,7 +78,7 @@ public class SlayerWikiPlugin extends Plugin
 		 .put("dark beast", NpcID.DARK_BEAST)
 		 .put("dark warriors", NpcID.DARK_WARRIOR)
 		 .put("dogs", NpcID.GUARD_DOG)
-		 .put("drakes", NpcID.DRAKE)
+		 .put("drakes", NpcID.DRAKE_8612)
 		 .put("dwarfs", NpcID.DWARF)
 		 .put("earth warriors", NpcID.EARTH_WARRIOR)
 		 .put("elves", NpcID.ELF_ARCHER)
@@ -127,7 +126,7 @@ public class SlayerWikiPlugin extends Plugin
 		 .put("red dragons", NpcID.RED_DRAGON)
 		 .put("rockslugs", NpcID.ROCKSLUG)
 		 .put("rogues", NpcID.ROGUE)
-		 .put("rune dragons", NpcID.RUNE_DRAGON)
+		 .put("rune dragons", NpcID.RUNE_DRAGON_8031)
 		 .put("scabarites", NpcID.SCABARAS)
 		 .put("scorpions", NpcID.SCORPION)
 		 .put("sea snakes", NpcID.SEA_SNAKE_YOUNG)
@@ -137,10 +136,10 @@ public class SlayerWikiPlugin extends Plugin
 		 .put("skeletons", NpcID.SKELETON)
 		 .put("smoke devils ", NpcID.SMOKE_DEVIL)
 		 .put("spiders", NpcID.SPIDER)
-		 .put("steel dragons", NpcID.STEEL_DRAGON)
+		 .put("steel dragons", NpcID.STEEL_DRAGON_274)
 		 .put("suqahs", NpcID.SUQAH)
 		 .put("terror dogs", NpcID.TERROR_DOG)
-		 .put("trolls", NpcID.TROLL)
+		 .put("trolls", NpcID.MOUNTAIN_TROLL)
 		 .put("turoths", NpcID.TUROTH)
 		 .put("vampyres", NpcID.FERAL_VAMPYRE)
 		 .put("wall beasts", NpcID.WALL_BEAST)
