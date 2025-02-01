@@ -152,7 +152,7 @@ public class SlayerWikiPlugin extends Plugin
 		 .put("abyssal sire", NpcID.ABYSSAL_SIRE)
 		 .put("alchemical hydra", NpcID.ALCHEMICAL_HYDRA)
 		 .put("barrows", NpcID.DHAROK_THE_WRETCHED)
-		 .put("callisto", NpcID.CALLISTO)
+		 .put("callisto", NpcID.CALLISTO_6609)
 		 .put("cerberus", NpcID.CERBERUS)
 		 .put("chaos elemental", NpcID.CHAOS_ELEMENTAL)
 		 .put("chaos fanatic", NpcID.CHAOS_FANATIC)
