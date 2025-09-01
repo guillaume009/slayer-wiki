@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.*;
 import net.runelite.api.events.MenuOptionClicked;
 import net.runelite.api.gameval.DBTableID;
+import net.runelite.api.gameval.VarbitID;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.*;
@@ -201,7 +202,7 @@ public class SlayerWikiPlugin extends Plugin
 					DBTableID.SlayerTaskSublist.ID,
 					DBTableID.SlayerTaskSublist.COL_SUBTABLE_ID,
 					0,
-					taskId);
+					client.getVarbitValue(VarbitID.SLAYER_TARGET_BOSSID));
 
 			if (bossRows.isEmpty())
 			{
