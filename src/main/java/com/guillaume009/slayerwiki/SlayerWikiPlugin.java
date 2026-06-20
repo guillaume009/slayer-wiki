@@ -108,7 +108,8 @@ public class SlayerWikiPlugin extends Plugin
 		 .put("iron dragons", NpcID.IRON_DRAGON)
 		 .put("jellies", NpcID.JELLY)
 		 .put("jungle horrors", NpcID.JUNGLE_HORROR)
-		 .put("kalphites", NpcID.KALPHITE_SOLDIER)
+		 // Remove from list so that it uses the fallback name since kalphites is a generic slayer task with multiple possible monsters
+		 //.put("kalphites", NpcID.KALPHITE_SOLDIER)
 		 .put("killerwatts", NpcID.KILLERWATT)
 		 .put("kurasks", NpcID.KURASK)
 		 .put("lava dragons", NpcID.LAVA_DRAGON)
