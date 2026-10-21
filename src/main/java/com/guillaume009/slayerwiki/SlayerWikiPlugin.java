@@ -192,9 +192,6 @@ public class SlayerWikiPlugin extends Plugin
 	@Inject
 	private NPCManager npcManager;
 
-	@Inject
-	private SlayerPlugin slayerPlugin;
-
 	private String GetSlayerTaskName (){
 		int taskId = this.client.getVarpValue(395);
 		String taskName;
@@ -231,18 +228,21 @@ public class SlayerWikiPlugin extends Plugin
 	@Subscribe
 	public void onMenuOpened(MenuOpened event) {
 		final String target = Text.removeTags(event.getFirstEntry().getTarget().toLowerCase());
-		for ( String slayerItem : SLAYER_ITEMS) {
+		for (String slayerItem : SLAYER_ITEMS) {
 			if (target.contains(slayerItem)) {
-				final SlayerConfig slayerConfig = configManager.getConfig(SlayerConfig.class);
-
 				final String slayerTask = GetSlayerTaskName();
-
 				if (!slayerTask.isEmpty()) {
 					final MenuEntry[] menuEntries = event.getMenuEntries();
-					final Integer menuLength = menuEntries.length + 1;
-					final String TASK = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, slayerTask);
-
-					client.createMenuEntry(1).setOption("Task Wiki").setTarget(ColorUtil.prependColorTag(TASK, Color.orange)).setType(MenuAction.RUNELITE);
+					int insertIndex = -1;
+					for (int i = 0; i < menuEntries.length; i++) {
+						if ("Drop".equalsIgnoreCase(menuEntries[i].getOption())) {
+							insertIndex = i;
+							break;
+						}
+					}
+					final String task = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, slayerTask);
+					client.createMenuEntry(insertIndex).setOption("Task Wiki")
+						.setTarget(ColorUtil.prependColorTag(task, Color.orange)).setType(MenuAction.RUNELITE);
 				}
 				break;
 			}
